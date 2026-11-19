@@ -4,16 +4,16 @@ A pre-registered two-year backtest on hourly demand in Dominion Energy's zone of
 
 ## Summary
 
-- **Day-ahead:** two time-series foundation models were never trained on this zone and saw only one week of history. They still matched or beat a SARIMAX trained on years of it.
-  - TimesFM 2.5 beat SARIMAX without future weather in both test years.
-  - Chronos-Bolt beat it in the first year and tied in the most recent.
-  - Against the post-hoc SARIMAX order the day-ahead edge narrows: TimesFM is better in year 2 only (−0.070 [−0.123, −0.015]) and ties in year 1; Chronos-Bolt is better in year 1 only (−0.098 [−0.168, −0.010]) and ties in year 2.
-- **Week-ahead:** the result depends on one modelling choice in SARIMAX, its differencing order.
+- **Day-ahead (24 h).** Two time-series foundation models were never trained on this zone and saw only one week of history. They still matched or beat SARIMAX without future weather.
+  - TimesFM 2.5 beat the pre-registered SARIMAX in both test years. It beat the post-hoc SARIMAX in year 2 and tied it in year 1.
+  - Chronos-Bolt beat both SARIMAX versions in year 1 and tied them in year 2.
+- **Week-ahead (168 h).** No proven edge for the foundation models.
   - As pre-registered, SARIMAX was no better than "same hour last week", and both foundation models beat it.
-  - With the order that unit-root tests on its residuals support, chosen after the first results and labelled as post-hoc, SARIMAX without future weather is level with TimesFM in both years (+0.022 and +0.023, intervals spanning zero) and ahead of Chronos-Bolt at the headline context (+0.077 and +0.115, intervals excluding zero); with 2,048 h of context Chronos-Bolt is level with it too.
-  - So this study shows no week-ahead advantage for the foundation models over a well-specified SARIMAX.
-- **A general LLM** (Qwen2.5-7B, 4-bit, run locally) did worse than repeating yesterday's load. Its 80% ranges covered about 40% of outcomes, where a perfectly calibrated model with 5 samples would reach about 67%.
-- **More history** (2,048 h instead of 168 h) helped Chronos-Bolt in the most recent year, and did not help TimesFM.
+  - The post-hoc order is the one unit-root tests on its residuals support, and it is labelled as post-hoc. With it, SARIMAX is level with TimesFM in both years and ahead of Chronos-Bolt. With 2,048 h of history, Chronos-Bolt is level with it too.
+- **A general LLM** (Qwen2.5-7B, 4-bit, run locally) did worse than repeating yesterday's load. Its 80% ranges covered about 40% of outcomes, where a perfectly calibrated 5-sample range reaches about 67%.
+- **Longer history** (2,048 h instead of 168 h) helped Chronos-Bolt in year 2 and did not help TimesFM.
+
+![Forecast error by method and test year](results/chart_mase.png)
 
 I built this to learn how modern forecasting methods compare with a classic statistical model when all of them face the same honest backtest: fixed origins, no look-ahead, intervals checked and every change after the results logged.
 
@@ -23,9 +23,17 @@ I built this to learn how modern forecasting methods compare with a classic stat
 - interval coverage for every method;
 - a public record of what changed after the first results.
 
+The weak LLM result fits Tan et al. (2024), who found that the language-model parts of LLM-based forecasters add little to accuracy.
+
+**How this was built.** I defined the study and approved the plan. An AI coding agent wrote the code to `PLAN.md`, and Claude (Anthropic) reviewed each stage before the next one ran. The stage reports and reviews are in [`docs/process/`](docs/process/).
+
 ## The question
 
 How well do classic, deep-learning, foundation-model and general-LLM forecasts track hourly demand in the Dominion zone? Does any of them hold up better in the most recent year? And are their prediction intervals honest?
+
+**The zone is growing fast.** Mean daily load rose 32% from 2019 to 2025, from 11,687 to 15,403 MW. The annual peak rose from 19,803 MW in 2019 to 25,413 MW in 2026.
+
+![Daily mean and peak load by year](results/step0_load_by_year.png)
 
 Data centers are not metered separately in this data. The study can show how well forecasts track a growing zone. It cannot say how much of the growth, or of any forecast error, comes from data centers.
 
@@ -96,8 +104,6 @@ Data centers are not metered separately in this data. The study can show how wel
 | Chronos-Bolt | 0.949 / 1.016 | 0.59 / 0.64 |
 | TimesFM 2.5 | 0.894 / 0.925 | 0.75 / 0.77 |
 
-![MASE by method with 95% intervals, by test year](results/chart_mase.png)
-
 ### What the paired comparisons support
 
 These are paired MASE differences across the same origins, with 95% block-bootstrap intervals. A claim is made only where the interval excludes zero.
@@ -136,6 +142,8 @@ The post-hoc order was confirmed with fully converged fits; it beats the runner-
 So the plain reading is that SARIMAX's week-ahead accuracy here depends more on its differencing order than on any other choice in this study.
 
 ### Prediction intervals
+
+![Coverage of the 80% prediction intervals](results/chart_coverage.png)
 
 - **Day-ahead:** the foundation models' 80% intervals are within about 0.05 of target, TimesFM slightly wide and Chronos-Bolt slightly narrow. SARIMAX without future weather under-covered in year 1 (0.68), and the LSTM's are too wide (0.90 / 0.88).
 - **Week-ahead:** Chronos-Bolt's are too narrow, at 0.59 / 0.64, and 0.63 / 0.68 with 2,048 h of history. TimesFM, the pre-registered SARIMAX and the LSTM are within about 0.06 of target; the post-hoc order's week-ahead intervals under-cover, at 0.68 / 0.72.
@@ -176,26 +184,30 @@ The headline uses 168 h, matched to the LLM as pre-registered. No "best context 
 ## Reproduce
 
 - **Data hash check.** Download `out_eia930__hourly_subregion_demand.parquet` from the PUDL v2026.11.0 release and verify its SHA-256: `1216ed4f47617e3b7271af9f723cd5a59fab025a4eeb98aec145a8e1688957b2`. The pinned DOM extract (`data/raw/dom_hourly_demand.parquet`, gitignored, not in the repo) has SHA-256 `40bca6952cf1b2648b3e3319ac96061172253ba59b75cbfc3f77fd30d2fe7352`. Both hashes are recorded in DATA_SOURCES.md.
-- **Notebook and kernel order.** `notebooks/nova_load_backtest.ipynb` runs end to end on Kaggle's free tier (CPU classics, GPU LSTM/foundation/LLM); the study's Kaggle notebook will be published on Kaggle with the study. The runs behind these results used private Kaggle kernels in this order: `nova-load-backtest` (a smoke run, then the full run), `nova-load-backtest-resume` (the full run's second half, after the first kernel died), `nova-load-topup-sarimax-intervals` (interval repair for four origins), then the checks kernels `nova-load-context-2048`, `nova-load-checks-cpu`, `nova-load-checks2-gpu` and `nova-load-checks2-cpu`. The final checks round ran locally.
+- **Notebook and kernel order.** `notebooks/nova_load_backtest.ipynb` runs end to end on Kaggle's free tier: CPU for the classic models, GPU for the LSTM, the foundation models and the LLM. The runs behind these results used private Kaggle kernels in this order: `nova-load-backtest` (a smoke run, then the full run), `nova-load-backtest-resume` (the full run's second half, after the first kernel died), `nova-load-topup-sarimax-intervals` (interval repair for four origins), then the checks kernels `nova-load-context-2048`, `nova-load-checks-cpu`, `nova-load-checks2-gpu` and `nova-load-checks2-cpu`. The final checks round ran locally.
+- **Charts.** Run `python scripts/make_charts.py` from the repo root.
 - **Regenerating `results/`.** The main and paired tables are recomputed from `results/forecasts_long.csv` by the notebook's scoring code (DECISIONS.md #14); the sensitivity, variant and checks tables are computed from their saved forecast files with the same scoring code.
 
 Cost: $0, on Kaggle's free tier — about 9.4 GPU hours and about 13 CPU hours on Kaggle across all rounds, plus about an hour of local compute for the final checks round.
 
 ## Files
 
-- `PLAN.md`
-- `DEVIATIONS.md`
-- `DECISIONS.md`
-- `DATA_SOURCES.md`
-- `results/` (all tables and charts)
-- `notebooks/`
+- **The plan:** `PLAN.md`, committed before any model saw the test period and unchanged since.
+- **Changes and decisions:**
+  - `DEVIATIONS.md`: every change after the first results, with both versions reported.
+  - `DECISIONS.md`: the dated log of every decision.
+- **Data and cost:** `DATA_SOURCES.md` (sources, licences, hashes) and `SPEND.md`.
+- **Results:** `results/`, with tables, forecasts and charts; [`results/README.md`](results/README.md) says what each file holds.
+- **Process:** [`docs/process/`](docs/process/) holds each stage's report and its review.
+- **Code:** `notebooks/` and `scripts/`.
 
 ## References
 
-- Ansari et al. (2024). Chronos: Learning the Language of Time Series. *Transactions on Machine Learning Research*. arXiv:2403.07815. Chronos-Bolt model card: https://huggingface.co/amazon/chronos-bolt-base
-- Das et al. (2024). TimesFM. ICML 2024. https://github.com/google-research/timesfm
-- Gruver et al. (2023). LLMTime.
-- Simeone (2026). arXiv:2602.10848.
-- Hyndman et al. The R `forecast` package (`auto.arima`, `nsdiffs`).
-- Catalyst Cooperative (2026). PUDL release v2026.11.0. Concept DOI: 10.5281/zenodo.3653158. https://docs.catalyst.coop/pudl/en/stable/data_sources/eia930.html
-- Weather data by Open-Meteo.com (CC BY 4.0), via the Open-Meteo historical archive API.
+- Ansari, A. F., et al. (2024). Chronos: Learning the Language of Time Series. *Transactions on Machine Learning Research*. [arXiv:2403.07815](https://arxiv.org/abs/2403.07815). Chronos-Bolt model card: https://huggingface.co/amazon/chronos-bolt-base
+- Das, A., Kong, W., Sen, R., & Zhou, Y. (2024). A decoder-only foundation model for time-series forecasting. *ICML 2024*. [arXiv:2310.10688](https://arxiv.org/abs/2310.10688). TimesFM 2.5 model card: https://huggingface.co/google/timesfm-2.5-200m-pytorch
+- Gruver, N., Finzi, M., Qiu, S., & Wilson, A. G. (2023). Large Language Models Are Zero-Shot Time Series Forecasters. *NeurIPS 2023*. [arXiv:2310.07820](https://arxiv.org/abs/2310.07820)
+- Tan, M., Merrill, M. A., Gupta, V., Althoff, T., & Hartvigsen, T. (2024). Are Language Models Actually Useful for Time Series Forecasting? *NeurIPS 2024*. [arXiv:2406.16964](https://arxiv.org/abs/2406.16964)
+- Simeone (2026). Time Series Foundation Models for Energy Load Forecasting on Consumer Hardware. [arXiv:2602.10848](https://arxiv.org/abs/2602.10848)
+- Hyndman, R. J., et al. The R `forecast` package (`auto.arima`, `nsdiffs`): https://github.com/robjhyndman/forecast
+- Catalyst Cooperative (2026). PUDL release v2026.11.0. Concept DOI [10.5281/zenodo.3653158](https://doi.org/10.5281/zenodo.3653158). EIA-930 documentation: https://docs.catalyst.coop/pudl/en/stable/data_sources/eia930.html
+- Weather data by [Open-Meteo.com](https://open-meteo.com/) (CC BY 4.0), via the Open-Meteo historical archive API.

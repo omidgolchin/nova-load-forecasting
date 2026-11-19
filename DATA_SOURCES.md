@@ -1,6 +1,6 @@
 # Data sources
 
-Access date for all entries: 2026-11-17 (Step 0 check, REPORT_DATA.md).
+Access date for all entries: 2026-11-17 (Step 0 check, docs/process/REPORT_DATA.md).
 
 ## Demand — EIA Form 930, PJM Dominion subregion (DOM)
 

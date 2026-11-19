@@ -10,7 +10,7 @@ the next section: Claude's review of REPORT_CHECKS (item A)
 moved the differencing tests onto the OLS regression residuals,
 the tests there pointed to (0, 1), and his ruling on A made that
 the one post-hoc sensitivity. The (2,0,2)×(1,0,1,24) results
-below and in REPORT_CHECKS.md check 4 stay on record, labelled
+below and in docs/process/REPORT_CHECKS.md check 4 stay on record, labelled
 superseded; the write-up reports the (0, 1) sensitivity, not
 this one.
 
@@ -41,7 +41,7 @@ Per the review:
   among (p, 0, q) × (P, 0, Q, 24) candidates on the same
   training window, then run through the identical backtest
   (same origins, refit schedule, warm-start chain, exog, scoring).
-  Both versions are reported side by side in REPORT_CHECKS.md.
+  Both versions are reported side by side in docs/process/REPORT_CHECKS.md.
   The sensitivity is not a replacement result and was not used
   to tune anything.
 
@@ -79,7 +79,7 @@ to D = 1.
   (p ≈ 0) → d = 0. On the D = 0 branch the d tests contradict
   each other (KPSS 13.25, p = 0.01, against ADF −11.5).
 
-**Claude's ruling (RULING_A_CLAUDE.md, DECISIONS #26): keep
+**Claude's ruling (docs/process/RULING_A_CLAUDE.md, DECISIONS #26): keep
 (d = 0, D = 1).** His instruction named both tests and set no
 tie-break, so the gap is his. His two reasons, which do not
 depend on the sensitivity's result:
@@ -98,7 +98,7 @@ The ruling pre-committed to standing whatever the seasonal
 strength showed.
 
 **Timing of the ruling (recorded in checks round 3, per
-REVIEW_CHECKS2_CLAUDE.md item 3).** The ruling was relayed at
+docs/process/REVIEW_CHECKS2_CLAUDE.md item 3).** The ruling was relayed at
 ~18:38 EST on 2026-11-18 and applied at 18:41 EST
 (DECISIONS #26), while the (0, 1) backtest was still running
 on the CPU kernel; the backtest completed at ~22:23 EST the
@@ -114,7 +114,7 @@ origins). Its no-future MASE: 24 h 0.546/0.552, 168 h
 0.872/0.902; oracle: 24 h 0.479/0.484, 168 h 0.799/0.841
 (halves 1/2), against the pre-registered order's no-future
 168 h 1.162/1.240, which is indistinguishable from seasonal
-naive (1.162/1.236). Full table: REPORT_CHECKS_2.md item A;
+naive (1.162/1.236). Full table: docs/process/REPORT_CHECKS_2.md item A;
 scores in results/scores_sensitivity2.csv.
 
 - **The first full run stands as the pre-registered result.**
@@ -142,7 +142,7 @@ the capped fits suggested. The AIC of 220,663.7 quoted above
 for the selection was a non-converged stop of the same capped
 procedure (three executions of it stopped at 230,938.2 /
 220,663.7 / 220,680.1). The (0, 1) backtest stands as run.
-Full record: REPORT_CHECKS_3.md item 1;
+Full record: docs/process/REPORT_CHECKS_3.md item 1;
 results/checks3_item1.md.
 
 **The pre-registered selection hit the same cap.** In the

@@ -19,7 +19,7 @@ from 2019: 362 of 68,645 (291 missing, 69 anomalous-region on
 clock-change days, 2 corrupt global outliers on 2021-10-19 that must
 never enter as reported). Whether to use PUDL's imputed series for
 flagged/missing hours is left to Claude's Step 0 review; default stays
-reported values. Detail: REPORT_DATA.md.
+reported values. Detail: docs/process/REPORT_DATA.md.
 #4 (2026-11-17, Claude's Step 0 review; applied on Omid's go) Missing
 and flagged hours: neither series is used as it is. Scoring targets
 are reported values on unflagged hours only; a missing,
@@ -71,7 +71,7 @@ run records kernel version, accelerator type, runtime and GPU hours
 used against the weekly quota; results are pulled back into results/
 (CSV plus PNG) so the review can read them from GitHub. The second
 stop point is unchanged: stop after the first full run and send
-REPORT_RESULTS.md. Priority is unchanged (#2): S03 first, S04 fills
+docs/process/REPORT_RESULTS.md. Priority is unchanged (#2): S03 first, S04 fills
 the gaps.
 #10 (2026-11-17, notebook build; implementation choices where PLAN.md
 leaves a detail open — each picked to make the comparison fairer or
@@ -140,7 +140,7 @@ schedule): statsmodels fits use low_memory=True, and results objects
 are deleted with an explicit garbage collection after each origin
 and refit. The repo notebook carries these fixes; v4 ran the
 pre-fix build. Final results are reported across both runs in
-REPORT_RESULTS.md.
+docs/process/REPORT_RESULTS.md.
 #12 (2026-11-18, resume mechanics) The resume kernel's first
 version attached v4 as a kernel source, but v4's outputs were not
 mounted (its run ended in error status, and Kaggle exposes only
@@ -196,8 +196,8 @@ Omid's go) The first full run is accepted as a complete and honest
 run. Before any write-up: run the review's Section 2 checks (1–8)
 and the one in-plan variant in its Section 3 (Chronos-Bolt and
 TimesFM at 2048 h context), with no new tuning and nothing fitted
-or selected on the test period. Full text: REVIEW_RESULTS_CLAUDE.md.
-Results go in REPORT_CHECKS.md to Claude; nothing is public, and
+or selected on the test period. Full text: docs/process/REVIEW_RESULTS_CLAUDE.md.
+Results go in docs/process/REPORT_CHECKS.md to Claude; nothing is public, and
 the CV/site describe the study only as "in progress" until Claude
 has reviewed the write-up.
 #17 (2026-11-18, review check 8 — compute rule) From now on
@@ -231,7 +231,7 @@ Refitting origin 52 with maxiter=500 converges, and its 13-origin
 block MASE changes by only +0.0002 to +0.0005 (both variants,
 both horizons); applied-origin interval coverage is unchanged to
 three decimals. No published number changes. Detail:
-REPORT_CHECKS.md check 3; results/sarimax_convergence.csv,
+docs/process/REPORT_CHECKS.md check 3; results/sarimax_convergence.csv,
 results/sarimax_block_mase_maxiter.csv.
 #20 (2026-11-18, review check 4 — sensitivity outcome) The
 (d = 0, D = 0) post-hoc sensitivity of DEVIATIONS.md ran on the
@@ -242,7 +242,7 @@ oracle 168 h 1.054/1.092 vs 1.115/1.202, no-future 24 h
 0.739/0.845 vs 0.626/0.534, no-future 168 h 1.239/1.291 vs
 1.162/1.240 (halves 1/2). The pre-registered run remains the
 result of record; the sensitivity is reported alongside it in
-REPORT_CHECKS.md check 4 and changes nothing else.
+docs/process/REPORT_CHECKS.md check 4 and changes nothing else.
 #21 (2026-11-18, Claude's review of REPORT_CHECKS; adopted on
 Omid's go) Checks 1, 2, 3, 5, 7 and 8 are accepted as they
 stand. Four follow-ups before the write-up: (A) the differencing
@@ -252,8 +252,8 @@ list; the Chronos-Bolt corpus attribution); (C) verify the
 context the foundation models actually received in the 2048 h
 variant, re-running TimesFM if its max_context was below 2048;
 (D) paired block-bootstrap intervals for the variant
-differences. Deliverable: REPORT_CHECKS_2.md. Full text:
-REVIEW_CHECKS_CLAUDE.md. The review also records that the
+differences. Deliverable: docs/process/REPORT_CHECKS_2.md. Full text:
+docs/process/REVIEW_CHECKS_CLAUDE.md. The review also records that the
 GitHub repo omidgolchin/nova-load-forecasting exists and is
 public and empty: nothing is pushed to it until Omid makes it
 private or decides to publish after Claude reviews the README.
@@ -286,7 +286,7 @@ run on a CPU kernel (DECISIONS #17) — and the
 (2,0,2)×(1,0,1,24) sensitivity is superseded in DEVIATIONS.md.
 The pre-registered run stays the headline. Had OCSB been
 followed instead, the order would have been (d = 1, D = 0);
-the disagreement is reported in REPORT_CHECKS_2.md for
+the disagreement is reported in docs/process/REPORT_CHECKS_2.md for
 Claude's ruling.
 #23 (2026-11-18, review item B — DATA_SOURCES corrections)
 TimesFM 2.5: the model card's four pretraining sources are now
@@ -333,7 +333,7 @@ half 1 (+0.063 [+0.013, +0.119]); its other differences span 0
 (24 h half 2 +0.027; 168 h −0.002 and +0.017).
 #26 (2026-11-18, Claude's ruling on item A; adopted on Omid's
 go) The (d = 0, D = 1) sensitivity stands; the running (0, 1)
-backtest finishes as launched. Full text: RULING_A_CLAUDE.md.
+backtest finishes as launched. Full text: docs/process/RULING_A_CLAUDE.md.
 Claude's grounds: his instruction named Canova–Hansen and
 OCSB with no tie-break; D = 1 is defensible because the
 residuals still carry most of the daily cycle (no regressor
@@ -349,7 +349,7 @@ window, 0.627 on the full training window. Both sit below
 the forecast package's 0.64 threshold, so the package's
 current default test would have given D = 0; the ruling
 pre-committed to standing regardless, and the value is
-reported beside the two test results in REPORT_CHECKS_2.md
+reported beside the two test results in docs/process/REPORT_CHECKS_2.md
 and disclosed in DEVIATIONS.md with both tests, their
 values, and Claude's two reasons.
 #27 (2026-11-18, review item A — the (0, 1) sensitivity
@@ -375,7 +375,7 @@ checks_run_record.json, checks2_kernel_log.txt. The kernel's
 two downloaded parquets are echoes of its inputs (the pinned
 PUDL table and the weather extract), not results, and are not
 committed (.gitignore excludes *.parquet; the repo carries no
-input data). REPORT_CHECKS_2.md is written; DEVIATIONS.md
+input data). docs/process/REPORT_CHECKS_2.md is written; DEVIATIONS.md
 carries the full item-A disclosure and marks the (0, 0)
 sensitivity superseded. Checks round 2 is complete; the
 write-up (review item E) and publishing follow Claude's
@@ -416,13 +416,13 @@ weekly-harmonics hypothesis appears nowhere in DEVIATIONS.md
 nothing was removed. Item 4: results/chart_mase.png
 regenerated with the sensitivity as a hollow "post-hoc
 order" marker row under the pre-registered SARIMAX
-no-future row. REPORT_CHECKS_3.md is written. Checks round 3
+no-future row. docs/process/REPORT_CHECKS_3.md is written. Checks round 3
 is complete; the README fill (including the one-sentence
 (0, 0) mention, review item 3.3) and publishing follow with
 Omid and Claude.
 #29 (2026-11-19, README filled) README.md is written from
 Claude's draft v1 (README_DRAFT_V1_CLAUDE.md), with every
-[pending] slot filled from REPORT_CHECKS_3.md and every
+[pending] slot filled from docs/process/REPORT_CHECKS_3.md and every
 [confirm] slot from PLAN.md, DECISIONS.md and
 DATA_SOURCES.md. [pending]: the post-hoc order's coverage
 (24 h 0.700/0.777, 168 h 0.680/0.723, from
