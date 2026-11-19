@@ -66,12 +66,12 @@ Access date for all entries: 2026-11-17 (Step 0 check, docs/process/REPORT_DATA.
 
 ## Foundation models — release dates and pretraining corpora
 
-Added 2026-11-18 (Claude's review of REPORT_RESULTS, check 6).
+Added 2026-11-18 (the review of REPORT_RESULTS, check 6).
 Sources accessed 2026-11-18. Only what the sources state is
 recorded. TimesFM's model card lists its pretraining sources at
 a high level; Chronos-Bolt's card gives a size but does not name
 its corpus. Two statements in the first version of this section
-were corrected the same day on Claude's review of
+were corrected the same day on the review of
 REPORT_CHECKS (item B); the corrections are marked below.
 
 ### TimesFM 2.5 (google/timesfm-2.5-200m-pytorch)

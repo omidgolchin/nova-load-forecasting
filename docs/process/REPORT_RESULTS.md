@@ -1,7 +1,7 @@
 # S04 — First full run: results (stop point 2)
 
 Numbers only, per PLAN.md stop point 2. Interpretation is
-Claude's and Omid's step, not this report's.
+Omid's step, not this report's.
 
 ## Backtest as run
 

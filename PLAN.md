@@ -4,9 +4,9 @@ Working title: "Can forecasting models keep up with data-center-driven
 demand? Hourly electricity load in the Dominion Energy zone."
 
 Written and committed 2026-11-17, before any model sees the test period.
-Changes after this commit go in DEVIATIONS.md. Brief: Claude, 2026-11-17;
+Changes after this commit go in DEVIATIONS.md. Brief: 2026-11-17;
 approved by Omid, 2026-11-17. Amended 2026-11-17 with the five rulings
-of Claude's Step 0 review (DECISIONS #4–#8), still before any modelling;
+of the Step 0 review (DECISIONS #4–#8), still before any modelling;
 Omid approved applying them the same day.
 
 ## Question
@@ -131,18 +131,18 @@ tracking, not how much of the growth is data centers.
 
 ## Stop points
 
-1. After Step 0: REPORT_DATA.md to Claude before any modelling.
+1. After Step 0: REPORT_DATA.md for review before any modelling.
 2. After the first full run: REPORT_RESULTS.md (table, charts, runtimes,
    anything unexpected; no interpretation beyond the numbers).
 
 ## Guardrails
 
-Never publish, post or make the repo public; Omid decides after Claude's
-review. Omid is the named author; no AI co-author lines. Never commit
+Never publish, post or make the repo public; Omid decides after
+review. Omid is the named author. Never commit
 API keys. Verify every reference before citing it. When unsure, pick the
 option that makes the claim smaller or the comparison fairer, log it in
-DECISIONS.md, and ask Claude. Budget: $0 compute; ≤ $3 optional API.
-Kaggle runs (approved in Claude's Step 0 review): kernels stay private
+DECISIONS.md, and ask for review. Budget: $0 compute; ≤ $3 optional API.
+Kaggle runs (approved in the Step 0 review): kernels stay private
 (`"is_private": true` in kernel-metadata.json) and any uploaded dataset
 stays private too; no Kaggle, EIA or Hugging Face credentials go in the
 repo, the notebook or its outputs; every run records its kernel

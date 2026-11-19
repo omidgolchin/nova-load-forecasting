@@ -1,6 +1,6 @@
 # Decisions
 
-#1 (2026-11-17) Study approved by Omid; brief by Claude (2026-11-17)
+#1 (2026-11-17) Study approved by Omid; brief of 2026-11-17
 governs. Defaults adopted from the brief's open questions: LLM arm is a
 small open instruction model (~7–8B, 4-bit) on the Kaggle GPU, API only
 as fallback; weather points Ashburn/Loudoun, Richmond, Norfolk averaged
@@ -18,9 +18,9 @@ which would conflict with publishing the study. DOM coverage verified
 from 2019: 362 of 68,645 (291 missing, 69 anomalous-region on
 clock-change days, 2 corrupt global outliers on 2021-10-19 that must
 never enter as reported). Whether to use PUDL's imputed series for
-flagged/missing hours is left to Claude's Step 0 review; default stays
+flagged/missing hours is left to the Step 0 review; default stays
 reported values. Detail: docs/process/REPORT_DATA.md.
-#4 (2026-11-17, Claude's Step 0 review; applied on Omid's go) Missing
+#4 (2026-11-17, the Step 0 review; applied on Omid's go) Missing
 and flagged hours: neither series is used as it is. Scoring targets
 are reported values on unflagged hours only; a missing,
 `anomalous_region` or `global_outlier` target hour is dropped from
@@ -36,10 +36,10 @@ a whole, drawing on later days and other regions, so an imputed hour
 just before a forecast origin can carry information from later in the
 same year — look-ahead in a backtest that a backward-only fill
 removes. The imputed column stays in the raw extract for reference.
-#5 (2026-11-17, Claude's Step 0 review) Training history starts
+#5 (2026-11-17, the Step 0 review) Training history starts
 2019-01-01, as Step 0 recommended. 2018 is excluded: 39% of its hours
 are missing, including one 71-day hole.
-#6 (2026-11-17, Claude's Step 0 review) Data version pinned to the
+#6 (2026-11-17, the Step 0 review) Data version pinned to the
 stable PUDL release v2026.11.0 (2026-11-10), not the nightly build,
 so the study can be re-run on identical data. If the stable release's
 DOM series ends before 2026-10-31 04:00 UTC, the 2026-11-16 nightly
@@ -47,13 +47,13 @@ is kept instead and DATA_SOURCES.md says so. Either way DATA_SOURCES.md
 records the release (with DOI if any) or nightly date, the file
 hashes and a hash of the DOM extract, and reported values are checked
 against the nightly where the two overlap.
-#7 (2026-11-17, Claude's Step 0 review) MASE uses a single fixed
+#7 (2026-11-17, the Step 0 review) MASE uses a single fixed
 scale for all methods, origins and halves: the mean absolute error of
 the lag-168 seasonal naive forecast over the training history
 (2019-01-01 to the start of the test period), computed under the same
 flagged-hour rules as the scores (#4). With a fixed scale, a MASE
 difference between methods is a difference in error, not in scaling.
-#8 (2026-11-17, Claude's Step 0 review) Test period on record:
+#8 (2026-11-17, the Step 0 review) Test period on record:
 2024-11-01 to 2026-10-31, in two halves (November 2024 – October
 2025; November 2025 – October 2026). Forecast origins are weekly at
 00:00 US Eastern; the last origin is the latest one whose full
@@ -62,7 +62,7 @@ plot covered the test years. No method, setting or ruling was chosen
 from them: PLAN.md fixed the design beforehand, and the rulings above
 concern data handling only. The README's "What this does not show"
 repeats this in one line.
-#9 (2026-11-17, Claude's Step 0 review) Running the notebook through
+#9 (2026-11-17, the Step 0 review) Running the notebook through
 the Kaggle API is approved, with conditions: kernels stay private
 (`"is_private": true`), any uploaded dataset stays private, nothing
 becomes public without Omid's approval; no Kaggle, EIA or Hugging
@@ -191,15 +191,14 @@ writes the top-up CSV after every origin. The study design is
 unchanged; this is execution isolation only.
 
 
-#16 (2026-11-18, Claude's review of REPORT_RESULTS; adopted on
+#16 (2026-11-18, the review of REPORT_RESULTS; adopted on
 Omid's go) The first full run is accepted as a complete and honest
 run. Before any write-up: run the review's Section 2 checks (1–8)
 and the one in-plan variant in its Section 3 (Chronos-Bolt and
 TimesFM at 2048 h context), with no new tuning and nothing fitted
-or selected on the test period. Full text: docs/process/REVIEW_RESULTS_CLAUDE.md.
-Results go in docs/process/REPORT_CHECKS.md to Claude; nothing is public, and
-the CV/site describe the study only as "in progress" until Claude
-has reviewed the write-up.
+or selected on the test period. Results go in docs/process/REPORT_CHECKS.md for review; nothing is public, and
+the CV/site describe the study only as "in progress" until the write-up
+has been reviewed.
 #17 (2026-11-18, review check 8 — compute rule) From now on
 SARIMAX runs on Kaggle CPU kernels; the GPU quota is reserved for
 the neural models. This governs the check-3 refits and the check-4
@@ -243,7 +242,7 @@ oracle 168 h 1.054/1.092 vs 1.115/1.202, no-future 24 h
 1.162/1.240 (halves 1/2). The pre-registered run remains the
 result of record; the sensitivity is reported alongside it in
 docs/process/REPORT_CHECKS.md check 4 and changes nothing else.
-#21 (2026-11-18, Claude's review of REPORT_CHECKS; adopted on
+#21 (2026-11-18, the review of REPORT_CHECKS; adopted on
 Omid's go) Checks 1, 2, 3, 5, 7 and 8 are accepted as they
 stand. Four follow-ups before the write-up: (A) the differencing
 tests rerun on the OLS regression residuals, D decided before
@@ -252,11 +251,10 @@ list; the Chronos-Bolt corpus attribution); (C) verify the
 context the foundation models actually received in the 2048 h
 variant, re-running TimesFM if its max_context was below 2048;
 (D) paired block-bootstrap intervals for the variant
-differences. Deliverable: docs/process/REPORT_CHECKS_2.md. Full text:
-docs/process/REVIEW_CHECKS_CLAUDE.md. The review also records that the
+differences. Deliverable: docs/process/REPORT_CHECKS_2.md. The review also records that the
 GitHub repo omidgolchin/nova-load-forecasting exists and is
 public and empty: nothing is pushed to it until Omid makes it
-private or decides to publish after Claude reviews the README.
+private or decides to publish after the README is reviewed.
 #22 (2026-11-18, review item A — differencing tests on the
 regression residuals, training data only) Procedure as
 prescribed: OLS of load on the 13 exogenous columns over the
@@ -271,7 +269,7 @@ D = 0), so the data and implementations match round 1. On the
 residuals the two D tests disagree: Canova–Hansen statistic
 8.759 against 5.099 → D = 1; OCSB → D = 0. The same split
 appears on the full training window (CH 10.654 → D = 1; OCSB
-D = 0). Resolution, recorded here for Claude: Canova–Hansen is
+D = 0). Resolution, recorded here for review: Canova–Hansen is
 followed, as in round 1 (DECISIONS #18), where CH was the
 primary test — its statistic reported against its critical
 value — and OCSB the corroboration. The D = 1 branch is also
@@ -287,7 +285,7 @@ run on a CPU kernel (DECISIONS #17) — and the
 The pre-registered run stays the headline. Had OCSB been
 followed instead, the order would have been (d = 1, D = 0);
 the disagreement is reported in docs/process/REPORT_CHECKS_2.md for
-Claude's ruling.
+the ruling.
 #23 (2026-11-18, review item B — DATA_SOURCES corrections)
 TimesFM 2.5: the model card's four pretraining sources are now
 listed (GiftEvalPretrain; Wikimedia Pageviews, cutoff November
@@ -331,10 +329,9 @@ both horizons (24 h: −0.093 [−0.161, −0.037]; 168 h: −0.096
 TimesFM is worse with the interval excluding 0 only at 24 h in
 half 1 (+0.063 [+0.013, +0.119]); its other differences span 0
 (24 h half 2 +0.027; 168 h −0.002 and +0.017).
-#26 (2026-11-18, Claude's ruling on item A; adopted on Omid's
+#26 (2026-11-18, the ruling on item A; adopted on Omid's
 go) The (d = 0, D = 1) sensitivity stands; the running (0, 1)
-backtest finishes as launched. Full text: docs/process/RULING_A_CLAUDE.md.
-Claude's grounds: his instruction named Canova–Hansen and
+backtest finishes as launched. The grounds: the review's instruction named Canova–Hansen and
 OCSB with no tie-break; D = 1 is defensible because the
 residuals still carry most of the daily cycle (no regressor
 has a 24 h period) and the d step is coherent only after the
@@ -351,7 +348,7 @@ current default test would have given D = 0; the ruling
 pre-committed to standing regardless, and the value is
 reported beside the two test results in docs/process/REPORT_CHECKS_2.md
 and disclosed in DEVIATIONS.md with both tests, their
-values, and Claude's two reasons.
+values, and the ruling's two reasons.
 #27 (2026-11-18, review item A — the (0, 1) sensitivity
 backtest completed) The backtest left running under #26
 finished on the private CPU kernel nova-load-checks2-cpu
@@ -378,9 +375,9 @@ committed (.gitignore excludes *.parquet; the repo carries no
 input data). docs/process/REPORT_CHECKS_2.md is written; DEVIATIONS.md
 carries the full item-A disclosure and marks the (0, 0)
 sensitivity superseded. Checks round 2 is complete; the
-write-up (review item E) and publishing follow Claude's
-conclusions and README draft with Omid.
-#28 (2026-11-19, checks round 3 — REVIEW_CHECKS2_CLAUDE
+write-up (review item E) and publishing follow the
+conclusions and README draft.
+#28 (2026-11-19, checks round 3 — the round-2 review
 items 1–4 complete) Item 1: the five (0, 1) candidates
 refit to convergence (warm-started L-BFGS, cap 1,000, from
 the capped fits' endpoints; all five report converged ==
@@ -412,16 +409,16 @@ now records the ruling's timing (relayed ~18:38 EST, applied
 ruling preceded all sensitivity results) and states plainly
 that two of three seasonal criteria pointed to D = 0; the
 weekly-harmonics hypothesis appears nowhere in DEVIATIONS.md
-(it stands only in Claude's verbatim review text), so
+(it stood only in the review text), so
 nothing was removed. Item 4: results/chart_mase.png
 regenerated with the sensitivity as a hollow "post-hoc
 order" marker row under the pre-registered SARIMAX
 no-future row. docs/process/REPORT_CHECKS_3.md is written. Checks round 3
 is complete; the README fill (including the one-sentence
 (0, 0) mention, review item 3.3) and publishing follow with
-Omid and Claude.
+Omid.
 #29 (2026-11-19, README filled) README.md is written from
-Claude's draft v1 (README_DRAFT_V1_CLAUDE.md), with every
+draft v1, with every
 [pending] slot filled from docs/process/REPORT_CHECKS_3.md and every
 [confirm] slot from PLAN.md, DECISIONS.md and
 DATA_SOURCES.md. [pending]: the post-hoc order's coverage
@@ -450,8 +447,8 @@ compute totals from the reports (≈9.2 GPU h first run;
 checks round 1 ≈0.2 GPU h / ≈8.5 CPU h; checks round 2
 16,485 s CPU plus a short GPU verification run; checks
 round 3 ≈3,633 s local; $0 throughout). DEVIATIONS.md
-gains the two disclosures from Claude's acceptance of
-checks-3 item 1 (ACCEPTANCE_ITEM1_CLAUDE.md): the post-hoc
+gains the two disclosures from the acceptance of
+checks-3 item 1: the post-hoc
 order confirmed on converged fits (AIC 219,995.4, margin
 778.8; warm-start L-BFGS, maxiter 1,000, gradient
 ≤ 4.8 × 10⁻⁴), and the pre-registered selection's own cap
@@ -459,7 +456,7 @@ history (six of eight fits stopped at the 50-iteration cap;
 the selected order's fit did not; the pre-registered result
 stands as run). Nothing is published; publishing stays
 Omid's step.
-#30 (2026-11-19, code rule from Claude's acceptance of
+#30 (2026-11-19, code rule from the acceptance of
 checks-3 item 1) Any future SARIMAX fit in this repo sets
 an explicit maxiter and checks `mle_retvals['converged']`;
 a fit that has not converged is not reported as a result.

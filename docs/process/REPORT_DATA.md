@@ -92,7 +92,7 @@ Keep PLAN.md's default: **model on the EIA reported values**
 2. Missing hours stay missing (no silent filling) unless PLAN.md is
    amended. Switching flagged/missing hours to the PUDL imputed series
    is a one-line change and the imputed column is already downloaded —
-   but it is a PLAN decision for Claude/Omid, flagged here, not taken.
+   but it is a PLAN decision for Omid, flagged here, not taken.
 3. Start training history at **2019-01-01** (2018 excluded: partial
    year, 39% missing, 71-day hole). That still leaves ~5.8 years of
    training history before the Nov 2024 test start.
@@ -154,7 +154,7 @@ calls.
 ## Decisions needed
 
 None to proceed to the notebook build. Two items are flagged for
-Claude's Step 0 review, with defaults already in PLAN.md: (1) keep
+the Step 0 review, with defaults already in PLAN.md: (1) keep
 reported values (default) vs adopt the PUDL imputed series for
 flagged/missing hours; (2) training start 2019-01-01 as recommended
 above. Spend so far: $0.

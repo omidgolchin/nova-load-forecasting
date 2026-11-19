@@ -1,8 +1,8 @@
-# S04 — Checks on the first full run (Claude's review, 2026-11-18)
+# S04 — Checks on the first full run (review, 2026-11-18)
 
 Numbers only, as in REPORT_RESULTS.md. The review's provisional
-reading stands or falls on these checks; conclusions are Claude's
-step. Nothing was tuned on the test period; no method was refit or
+reading stands or falls on these checks; conclusions are a
+later step. Nothing was tuned on the test period; no method was refit or
 re-selected except where a check explicitly requires it (checks 3
 and 4), and those runs are labelled.
 

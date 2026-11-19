@@ -6,15 +6,15 @@ reasons. Results show both versions when a change follows test results.
 ## 2026-11-18 — SARIMAX differencing: post-hoc sensitivity at (d = 0, D = 0)
 
 **SUPERSEDED 2026-11-18** by the (d = 0, D = 1) sensitivity in
-the next section: Claude's review of REPORT_CHECKS (item A)
+the next section: the review of REPORT_CHECKS (item A)
 moved the differencing tests onto the OLS regression residuals,
-the tests there pointed to (0, 1), and his ruling on A made that
+the tests there pointed to (0, 1), and the ruling on A made that
 the one post-hoc sensitivity. The (2,0,2)×(1,0,1,24) results
 below and in docs/process/REPORT_CHECKS.md check 4 stay on record, labelled
 superseded; the write-up reports the (0, 1) sensitivity, not
 this one.
 
-Raised by Claude's review of REPORT_RESULTS (check 4): the first
+Raised by the review of REPORT_RESULTS (check 4): the first
 run's AIC table compared candidate orders with different
 differencing orders (d = 0 and 1; D = 0 and 1), and AIC is not
 comparable across differencing orders.
@@ -47,7 +47,7 @@ Per the review:
 
 ## 2026-11-18 — SARIMAX differencing: the sensitivity moves to (d = 0, D = 1)
 
-Claude's review of REPORT_CHECKS (item A) found the round-1
+the review of REPORT_CHECKS (item A) found the round-1
 tests were run on the wrong series: SARIMAX here is a regression
 with ARIMA errors, so the differencing question is about the
 errors. The tests were rerun on the OLS residuals (load on the
@@ -79,9 +79,9 @@ to D = 1.
   (p ≈ 0) → d = 0. On the D = 0 branch the d tests contradict
   each other (KPSS 13.25, p = 0.01, against ADF −11.5).
 
-**Claude's ruling (docs/process/RULING_A_CLAUDE.md, DECISIONS #26): keep
-(d = 0, D = 1).** His instruction named both tests and set no
-tie-break, so the gap is his. His two reasons, which do not
+**The ruling (DECISIONS #26): keep
+(d = 0, D = 1).** The review's instruction named both tests and set no
+tie-break, so the gap was in the review. Its two reasons, which do not
 depend on the sensitivity's result:
 
 1. The residuals still carry most of the daily cycle — no
@@ -98,7 +98,7 @@ The ruling pre-committed to standing whatever the seasonal
 strength showed.
 
 **Timing of the ruling (recorded in checks round 3, per
-docs/process/REVIEW_CHECKS2_CLAUDE.md item 3).** The ruling was relayed at
+the round-2 review, item 3).** The ruling was relayed at
 ~18:38 EST on 2026-11-18 and applied at 18:41 EST
 (DECISIONS #26), while the (0, 1) backtest was still running
 on the CPU kernel; the backtest completed at ~22:23 EST the
@@ -127,7 +127,7 @@ scores in results/scores_sensitivity2.csv.
   to tune anything.
 
 **Converged-fits confirmation (checks round 3, 2026-11-19;
-DECISIONS #28; accepted by Claude, ACCEPTANCE_ITEM1_CLAUDE.md).**
+DECISIONS #28; accepted on review).**
 The five (0, 1) candidates were refit to convergence on the
 same order-selection window. Each fit was warm-started from
 its capped endpoint with the L-BFGS iteration cap raised from

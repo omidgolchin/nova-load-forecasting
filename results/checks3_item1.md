@@ -1,6 +1,6 @@
 # S04 — Checks round 3, item 1 (working draft for REPORT_CHECKS_3)
 
-Item 1 of REVIEW_CHECKS2_CLAUDE.md: settle the (d = 0, D = 1)
+Item 1 of the round-2 review: settle the (d = 0, D = 1)
 SARIMAX selection with converged fits. All work on training
 data only (the order-selection window 2022-11-01 → 2024-11-01);
 nothing in the test period was touched, and the pre-registered

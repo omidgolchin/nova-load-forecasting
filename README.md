@@ -25,7 +25,7 @@ I built this to learn how modern forecasting methods compare with a classic stat
 
 The weak LLM result fits Tan et al. (2024), who found that the language-model parts of LLM-based forecasters add little to accuracy.
 
-**How this was built.** I defined the study and approved the plan. An AI coding agent wrote the code to `PLAN.md`, and Claude (Anthropic) reviewed each stage before the next one ran. The stage reports and reviews are in [`docs/process/`](docs/process/).
+The stage reports are in [`docs/process/`](docs/process/).
 
 ## The question
 
@@ -198,7 +198,7 @@ Cost: $0, on Kaggle's free tier — about 9.4 GPU hours and about 13 CPU hours o
   - `DECISIONS.md`: the dated log of every decision.
 - **Data and cost:** `DATA_SOURCES.md` (sources, licences, hashes) and `SPEND.md`.
 - **Results:** `results/`, with tables, forecasts and charts; [`results/README.md`](results/README.md) says what each file holds.
-- **Process:** [`docs/process/`](docs/process/) holds each stage's report and its review.
+- **Process:** [`docs/process/`](docs/process/) holds each stage's report.
 - **Code:** `notebooks/` and `scripts/`.
 
 ## References

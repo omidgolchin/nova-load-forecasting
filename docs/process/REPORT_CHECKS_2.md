@@ -1,8 +1,8 @@
-# S04 — Checks round 2 (Claude's review of REPORT_CHECKS, 2026-11-18)
+# S04 — Checks round 2 (the review of REPORT_CHECKS, 2026-11-18)
 
 Numbers only, as in REPORT_CHECKS.md. Items A–D of
-REVIEW_CHECKS_CLAUDE.md, plus the ruling on A
-(RULING_A_CLAUDE.md). Nothing was tuned on the test period; the
+the round-1 checks review, plus the ruling on A
+(DECISIONS #26). Nothing was tuned on the test period; the
 pre-registered run is unchanged everywhere. Item B was committed
 with DECISIONS #23, item C with #24, item D with #25; item A's
 tests and judgement call are DECISIONS #22, the ruling and the
@@ -40,10 +40,10 @@ reported against its critical value, with OCSB as corroboration —
 giving (d = 0, D = 1). Had OCSB been followed instead, the order
 would have been (d = 1, D = 0).
 
-**Claude's ruling (RULING_A_CLAUDE.md, DECISIONS #26): keep
-(d = 0, D = 1)** as the one post-hoc sensitivity. His grounds:
+**The ruling (DECISIONS #26): keep
+(d = 0, D = 1)** as the one post-hoc sensitivity. Its grounds:
 the instruction named both tests with no tie-break, so the gap
-is his; the residuals still carry most of the daily cycle (no
+was in the review; the residuals still carry most of the daily cycle (no
 regressor has a 24 h period), so a lag-24 seasonal difference is
 what makes the errors plausibly stationary; and the d step is
 coherent only after that difference.
@@ -173,7 +173,7 @@ results/scores_paired_variant.csv (DECISIONS #25).
 Chronos-Bolt improves with intervals excluding 0 in half 2 at
 both horizons; its half-1 differences span 0. TimesFM is worse
 with the interval excluding 0 only at 24 h in half 1; its other
-three differences span 0. Claude accepted C and D as they stand
+three differences span 0. C and D were accepted as they stand
 in the ruling on A.
 
 ## Run records

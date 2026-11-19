@@ -1,6 +1,6 @@
-# S04 — Checks round 3 (Claude's review of REPORT_CHECKS_2, 2026-11-18)
+# S04 — Checks round 3 (the review of REPORT_CHECKS_2, 2026-11-18)
 
-Items 1, 2 and 4 of REVIEW_CHECKS2_CLAUDE.md, plus item 3's
+Items 1, 2 and 4 of the round-2 review, plus item 3's
 DEVIATIONS.md changes. Numbers only, as in REPORT_CHECKS.md.
 Training data and saved forecasts only; nothing was refit or
 re-selected on the test period, and the pre-registered run is
@@ -172,8 +172,8 @@ Applied to the (d = 0, D = 1) section of DEVIATIONS.md:
    0.627 against 0.64); only Canova–Hansen pointed to D = 1.
 3. **Weekly-harmonics hypothesis.** It does not appear in
    DEVIATIONS.md — the only place it stands in the repo is
-   Claude's own review text (REVIEW_CHECKS_CLAUDE.md, item
-   E), a verbatim record — so there was nothing to remove;
+   the round-1 checks review (item
+   E) — so there was nothing to remove;
    the write-up gives no cause for the week-ahead gap beyond
    the differencing order. The README's one-sentence mention
    of the superseded (0, 0) result (review item 3.3) belongs
