@@ -466,4 +466,12 @@ a fit that has not converged is not reported as a result.
 Origin: the 50-iteration default cap silently stopped 14
 of 14 executions of the (0, 1) selection procedure and six
 of the eight pre-registered selection fits (REPORT_CHECKS_3
-item 1).
+item 1).#31 (2026-11-19, correction after publication) Two coverage
+cells in the README's day-ahead table were mis-rounded in
+the draft the README was filled from: Chronos-Bolt year 2
+read 0.77 where scores_main.csv holds 0.7647, and TimesFM
+year 1 read 0.84 where it holds 0.8349. Both now read as
+the CSV rounds (0.76 and 0.83), in the README and in the
+Kaggle notebook. Every other MASE and coverage cell in
+both tables was re-checked against scores_main.csv and
+scores_sensitivity2_metrics.csv and matches. Omid's call.

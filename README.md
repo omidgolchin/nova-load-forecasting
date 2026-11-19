@@ -80,8 +80,8 @@ Data centers are not metered separately in this data. The study can show how wel
 | SARIMAX, no future weather, post-hoc order | 0.546 / 0.552 | 0.70 / 0.78 |
 | SARIMAX, observed weather (ceiling), pre-registered | 0.602 / 0.484 | 0.71 / 0.84 |
 | LSTM (3 seeds) | 0.711 / 0.896 | 0.90 / 0.88 |
-| Chronos-Bolt | 0.448 / 0.535 | 0.79 / 0.77 |
-| TimesFM 2.5 | 0.472 / 0.482 | 0.84 / 0.84 |
+| Chronos-Bolt | 0.448 / 0.535 | 0.79 / 0.76 |
+| TimesFM 2.5 | 0.472 / 0.482 | 0.83 / 0.84 |
 | Qwen2.5-7B (26 origins) | 1.048 / 1.415 | 0.38 / 0.41 |
 
 ### Week-ahead (168 h)
