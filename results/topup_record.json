@@ -1,0 +1,9 @@
+{
+  "kernel": "omidgolchin/nova-load-topup-sarimax-intervals",
+  "kernel_version": 3,
+  "accelerator": "Tesla T4",
+  "purpose": "SARIMAX 80% interval bounds for origins 52, 65, 78, 91 (DECISIONS #13, #15)",
+  "fit_seconds": {"52": 1834.5, "65": 570.4, "78": 523.6, "91": 646.1},
+  "point_check_vs_resume_run": "max abs difference 0.0000 MW over 1344 rows",
+  "note": "Kernel status shows error only because the final cell called save_record(), which lives in the study notebook's section 5 and was not part of the top-up build; all outputs were written before that cell."
+}

@@ -1,0 +1,5 @@
+refit_origin,converged,fit_s,n_warnings,warnings
+52,False,6356.6,1,ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+65,True,3812.7,0,
+78,True,3785.2,0,
+91,True,4072.4,0,

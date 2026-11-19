@@ -1,0 +1,5 @@
+method,horizon_h,block_mase_original,block_mase_maxiter500,block_coverage_maxiter500,n_origins
+sarimax_oracle,24,0.5889,0.5891,0.6635,13
+sarimax_oracle,168,1.3069,1.3071,0.6984,13
+sarimax_nofuture,24,0.643,0.6435,0.6154,13
+sarimax_nofuture,168,1.3638,1.3643,0.6923,13

@@ -1,0 +1,175 @@
+[{"stream_name":"stderr","time":8.793687622,"data":"/usr/local/lib/python3.13/dist-packages/nbformat/validator.py:434: MissingIDFieldWarning: Cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.\n"}
+,{"stream_name":"stderr","time":8.793746039,"data":"  _validate(nbdict, ref, version, version_minor, relax_add_props)\n"}
+,{"stream_name":"stderr","time":10.094245359,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":10.094281413,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":10.094286324,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":10.094289743,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":10.972947655,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":10.972985863,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":10.972992062,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":10.972997229,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":13.957775177,"data":"downloading pinned PUDL file ...\n"}
+,{"stream_name":"stdout","time":17.704050678,"data":"SHA-256 verified: 1216ed4f47617e3b7271af9f723cd5a59fab025a4eeb98aec145a8e1688957b2\n"}
+,{"stream_name":"stdout","time":18.102377381,"data":"DOM rows: 73056 | span: 2018-07-01 05:00:00 -\u003e 2026-10-31 04:00:00\n"}
+,{"stream_name":"stdout","time":18.241280767,"data":"weather 39.04,-77.49 through 2018-12-31\n"}
+,{"stream_name":"stdout","time":18.554620902,"data":"weather 39.04,-77.49 through 2019-04-02\n"}
+,{"stream_name":"stdout","time":18.852384272,"data":"weather 39.04,-77.49 through 2019-07-03\n"}
+,{"stream_name":"stdout","time":19.16620272,"data":"weather 39.04,-77.49 through 2019-10-03\n"}
+,{"stream_name":"stdout","time":19.462367094,"data":"weather 39.04,-77.49 through 2020-01-03\n"}
+,{"stream_name":"stdout","time":19.768200779,"data":"weather 39.04,-77.49 through 2020-04-04\n"}
+,{"stream_name":"stdout","time":20.078811675,"data":"weather 39.04,-77.49 through 2020-07-05\n"}
+,{"stream_name":"stdout","time":20.39980677,"data":"weather 39.04,-77.49 through 2020-10-05\n"}
+,{"stream_name":"stdout","time":20.697644936,"data":"weather 39.04,-77.49 through 2021-01-05\n"}
+,{"stream_name":"stdout","time":21.001115143,"data":"weather 39.04,-77.49 through 2021-04-07\n"}
+,{"stream_name":"stdout","time":21.295934151,"data":"weather 39.04,-77.49 through 2021-07-08\n"}
+,{"stream_name":"stdout","time":21.597658193,"data":"weather 39.04,-77.49 through 2021-10-08\n"}
+,{"stream_name":"stdout","time":21.905682665,"data":"weather 39.04,-77.49 through 2022-01-08\n"}
+,{"stream_name":"stdout","time":22.205533557,"data":"weather 39.04,-77.49 through 2022-04-10\n"}
+,{"stream_name":"stdout","time":22.50571642,"data":"weather 39.04,-77.49 through 2022-07-11\n"}
+,{"stream_name":"stdout","time":22.809074901,"data":"weather 39.04,-77.49 through 2022-10-11\n"}
+,{"stream_name":"stdout","time":23.107600123,"data":"weather 39.04,-77.49 through 2023-01-11\n"}
+,{"stream_name":"stdout","time":23.408737493,"data":"weather 39.04,-77.49 through 2023-04-13\n"}
+,{"stream_name":"stdout","time":23.711632893,"data":"weather 39.04,-77.49 through 2023-07-14\n"}
+,{"stream_name":"stdout","time":24.007536298,"data":"weather 39.04,-77.49 through 2023-10-14\n"}
+,{"stream_name":"stdout","time":24.307029249,"data":"weather 39.04,-77.49 through 2024-01-14\n"}
+,{"stream_name":"stdout","time":24.607676193,"data":"weather 39.04,-77.49 through 2024-04-15\n"}
+,{"stream_name":"stdout","time":24.903603921,"data":"weather 39.04,-77.49 through 2024-07-16\n"}
+,{"stream_name":"stdout","time":25.217234511,"data":"weather 39.04,-77.49 through 2024-10-16\n"}
+,{"stream_name":"stdout","time":25.514930794,"data":"weather 39.04,-77.49 through 2025-01-16\n"}
+,{"stream_name":"stdout","time":25.821519853,"data":"weather 39.04,-77.49 through 2025-04-18\n"}
+,{"stream_name":"stdout","time":26.132993374,"data":"weather 39.04,-77.49 through 2025-07-19\n"}
+,{"stream_name":"stdout","time":26.431804007,"data":"weather 39.04,-77.49 through 2025-10-19\n"}
+,{"stream_name":"stdout","time":26.729950794,"data":"weather 39.04,-77.49 through 2026-01-19\n"}
+,{"stream_name":"stdout","time":27.033094653,"data":"weather 39.04,-77.49 through 2026-04-21\n"}
+,{"stream_name":"stdout","time":27.335752454,"data":"weather 39.04,-77.49 through 2026-07-22\n"}
+,{"stream_name":"stdout","time":27.633510464,"data":"weather 39.04,-77.49 through 2026-10-22\n"}
+,{"stream_name":"stdout","time":27.921653776,"data":"weather 39.04,-77.49 through 2026-10-31\n"}
+,{"stream_name":"stdout","time":28.24395148,"data":"weather 37.54,-77.44 through 2018-12-31\n"}
+,{"stream_name":"stdout","time":28.541709237,"data":"weather 37.54,-77.44 through 2019-04-02\n"}
+,{"stream_name":"stdout","time":28.842519645,"data":"weather 37.54,-77.44 through 2019-07-03\n"}
+,{"stream_name":"stdout","time":29.143887057,"data":"weather 37.54,-77.44 through 2019-10-03\n"}
+,{"stream_name":"stdout","time":29.443198435,"data":"weather 37.54,-77.44 through 2020-01-03\n"}
+,{"stream_name":"stdout","time":29.750890195,"data":"weather 37.54,-77.44 through 2020-04-04\n"}
+,{"stream_name":"stdout","time":30.051508492,"data":"weather 37.54,-77.44 through 2020-07-05\n"}
+,{"stream_name":"stdout","time":30.349368073,"data":"weather 37.54,-77.44 through 2020-10-05\n"}
+,{"stream_name":"stdout","time":30.646112594,"data":"weather 37.54,-77.44 through 2021-01-05\n"}
+,{"stream_name":"stdout","time":30.946418815,"data":"weather 37.54,-77.44 through 2021-04-07\n"}
+,{"stream_name":"stdout","time":31.259193955,"data":"weather 37.54,-77.44 through 2021-07-08\n"}
+,{"stream_name":"stdout","time":31.555009619,"data":"weather 37.54,-77.44 through 2021-10-08\n"}
+,{"stream_name":"stdout","time":31.853117211,"data":"weather 37.54,-77.44 through 2022-01-08\n"}
+,{"stream_name":"stdout","time":32.15556219,"data":"weather 37.54,-77.44 through 2022-04-10\n"}
+,{"stream_name":"stdout","time":32.454776396,"data":"weather 37.54,-77.44 through 2022-07-11\n"}
+,{"stream_name":"stdout","time":32.753283096,"data":"weather 37.54,-77.44 through 2022-10-11\n"}
+,{"stream_name":"stdout","time":33.286788043,"data":"weather 37.54,-77.44 through 2023-01-11\n"}
+,{"stream_name":"stdout","time":33.589207045,"data":"weather 37.54,-77.44 through 2023-04-13\n"}
+,{"stream_name":"stdout","time":33.889583582,"data":"weather 37.54,-77.44 through 2023-07-14\n"}
+,{"stream_name":"stdout","time":34.187644083,"data":"weather 37.54,-77.44 through 2023-10-14\n"}
+,{"stream_name":"stdout","time":34.487609454,"data":"weather 37.54,-77.44 through 2024-01-14\n"}
+,{"stream_name":"stdout","time":34.788092801,"data":"weather 37.54,-77.44 through 2024-04-15\n"}
+,{"stream_name":"stdout","time":35.093925079,"data":"weather 37.54,-77.44 through 2024-07-16\n"}
+,{"stream_name":"stdout","time":35.396380253,"data":"weather 37.54,-77.44 through 2024-10-16\n"}
+,{"stream_name":"stdout","time":35.700473511,"data":"weather 37.54,-77.44 through 2025-01-16\n"}
+,{"stream_name":"stdout","time":36.002210563,"data":"weather 37.54,-77.44 through 2025-04-18\n"}
+,{"stream_name":"stdout","time":36.300790321,"data":"weather 37.54,-77.44 through 2025-07-19\n"}
+,{"stream_name":"stdout","time":36.598515452,"data":"weather 37.54,-77.44 through 2025-10-19\n"}
+,{"stream_name":"stdout","time":36.900784002,"data":"weather 37.54,-77.44 through 2026-01-19\n"}
+,{"stream_name":"stdout","time":37.202667544,"data":"weather 37.54,-77.44 through 2026-04-21\n"}
+,{"stream_name":"stdout","time":37.50345375,"data":"weather 37.54,-77.44 through 2026-07-22\n"}
+,{"stream_name":"stdout","time":37.802646997,"data":"weather 37.54,-77.44 through 2026-10-22\n"}
+,{"stream_name":"stdout","time":38.09468941,"data":"weather 37.54,-77.44 through 2026-10-31\n"}
+,{"stream_name":"stdout","time":38.415183875,"data":"weather 36.85,-76.29 through 2018-12-31\n"}
+,{"stream_name":"stdout","time":38.718962141,"data":"weather 36.85,-76.29 through 2019-04-02\n"}
+,{"stream_name":"stdout","time":39.017993451,"data":"weather 36.85,-76.29 through 2019-07-03\n"}
+,{"stream_name":"stdout","time":39.30905426,"data":"weather 36.85,-76.29 through 2019-10-03\n"}
+,{"stream_name":"stdout","time":39.60854765,"data":"weather 36.85,-76.29 through 2020-01-03\n"}
+,{"stream_name":"stdout","time":39.908753253,"data":"weather 36.85,-76.29 through 2020-04-04\n"}
+,{"stream_name":"stdout","time":40.20940994,"data":"weather 36.85,-76.29 through 2020-07-05\n"}
+,{"stream_name":"stdout","time":40.501047034,"data":"weather 36.85,-76.29 through 2020-10-05\n"}
+,{"stream_name":"stdout","time":40.799676722,"data":"weather 36.85,-76.29 through 2021-01-05\n"}
+,{"stream_name":"stdout","time":41.100428005,"data":"weather 36.85,-76.29 through 2021-04-07\n"}
+,{"stream_name":"stdout","time":41.409882943,"data":"weather 36.85,-76.29 through 2021-07-08\n"}
+,{"stream_name":"stdout","time":41.699281615,"data":"weather 36.85,-76.29 through 2021-10-08\n"}
+,{"stream_name":"stdout","time":42.001273358,"data":"weather 36.85,-76.29 through 2022-01-08\n"}
+,{"stream_name":"stdout","time":42.299332538,"data":"weather 36.85,-76.29 through 2022-04-10\n"}
+,{"stream_name":"stdout","time":42.60988682,"data":"weather 36.85,-76.29 through 2022-07-11\n"}
+,{"stream_name":"stdout","time":42.906680551,"data":"weather 36.85,-76.29 through 2022-10-11\n"}
+,{"stream_name":"stdout","time":43.205049401,"data":"weather 36.85,-76.29 through 2023-01-11\n"}
+,{"stream_name":"stdout","time":43.513197305,"data":"weather 36.85,-76.29 through 2023-04-13\n"}
+,{"stream_name":"stdout","time":43.809758129,"data":"weather 36.85,-76.29 through 2023-07-14\n"}
+,{"stream_name":"stdout","time":44.108849141,"data":"weather 36.85,-76.29 through 2023-10-14\n"}
+,{"stream_name":"stdout","time":44.406629918,"data":"weather 36.85,-76.29 through 2024-01-14\n"}
+,{"stream_name":"stdout","time":44.706243675,"data":"weather 36.85,-76.29 through 2024-04-15\n"}
+,{"stream_name":"stdout","time":45.008829098,"data":"weather 36.85,-76.29 through 2024-07-16\n"}
+,{"stream_name":"stdout","time":45.301907185,"data":"weather 36.85,-76.29 through 2024-10-16\n"}
+,{"stream_name":"stdout","time":45.611166597,"data":"weather 36.85,-76.29 through 2025-01-16\n"}
+,{"stream_name":"stdout","time":45.913484015,"data":"weather 36.85,-76.29 through 2025-04-18\n"}
+,{"stream_name":"stdout","time":46.217306179,"data":"weather 36.85,-76.29 through 2025-07-19\n"}
+,{"stream_name":"stdout","time":46.508815407,"data":"weather 36.85,-76.29 through 2025-10-19\n"}
+,{"stream_name":"stdout","time":46.806662991,"data":"weather 36.85,-76.29 through 2026-01-19\n"}
+,{"stream_name":"stdout","time":47.108677657,"data":"weather 36.85,-76.29 through 2026-04-21\n"}
+,{"stream_name":"stdout","time":47.404343439,"data":"weather 36.85,-76.29 through 2026-07-22\n"}
+,{"stream_name":"stdout","time":47.696004903,"data":"weather 36.85,-76.29 through 2026-10-22\n"}
+,{"stream_name":"stdout","time":47.984980092,"data":"weather 36.85,-76.29 through 2026-10-31\n"}
+,{"stream_name":"stdout","time":48.271076604,"data":"weather hours: 70872 | nulls: 0\n"}
+,{"stream_name":"stdout","time":48.404384397,"data":"series hours: 73056 | train start pos 4417 | flagged total 2091 | fallback fills 0\n"}
+,{"stream_name":"stdout","time":48.404424267,"data":"origins: 104 | first: 2024-11-01 00:00:00-04:00 | last: 2026-10-23 00:00:00-04:00 | halves: 53 / 51\n"}
+,{"stream_name":"stdout","time":48.404430267,"data":"MASE scale (MW): 1329.73\n"}
+,{"stream_name":"stdout","time":48.404435541,"data":"dropped target hours per half: {1: {'target_hours': 8903, 'dropped_flagged': 98}, 2: {'target_hours': 8567, 'dropped_flagged': 23}}\n"}
+,{"stream_name":"stderr","time":911.273052086,"data":"/usr/local/lib/python3.13/dist-packages/statsmodels/tsa/statespace/mlemodel.py:737: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals\n"}
+,{"stream_name":"stderr","time":911.273218665,"data":"  mlefit = super().fit(\n"}
+,{"stream_name":"stderr","time":911.273226458,"data":"\n"}
+,{"stream_name":"stderr","time":911.273230577,"data":"/usr/local/lib/python3.13/dist-packages/statsmodels/tsa/statespace/mlemodel.py:737: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals\n"}
+,{"stream_name":"stderr","time":911.273234877,"data":"  mlefit = super().fit(\n"}
+,{"stream_name":"stdout","time":957.338358952,"data":"alt2 candidate (1, 0, 1) (1, 1, 1, 24) AIC 224679.2\n"}
+,{"stream_name":"stderr","time":1859.325850892,"data":"/usr/local/lib/python3.13/dist-packages/statsmodels/tsa/statespace/mlemodel.py:737: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals\n"}
+,{"stream_name":"stderr","time":1859.326065484,"data":"  mlefit = super().fit(\n"}
+,{"stream_name":"stderr","time":1859.326074755,"data":"\n"}
+,{"stream_name":"stderr","time":1859.326078906,"data":"/usr/local/lib/python3.13/dist-packages/statsmodels/tsa/statespace/mlemodel.py:737: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals\n"}
+,{"stream_name":"stderr","time":1859.326083108,"data":"  mlefit = super().fit(\n"}
+,{"stream_name":"stdout","time":1907.443241585,"data":"alt2 candidate (2, 0, 1) (1, 1, 1, 24) AIC 220793.7\n"}
+,{"stream_name":"stderr","time":2972.925193415,"data":"/usr/local/lib/python3.13/dist-packages/statsmodels/tsa/statespace/mlemodel.py:737: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals\n"}
+,{"stream_name":"stderr","time":2972.925242513,"data":"  mlefit = super().fit(\n"}
+,{"stream_name":"stderr","time":2972.92525142,"data":"\n"}
+,{"stream_name":"stderr","time":2972.925259295,"data":"/usr/local/lib/python3.13/dist-packages/statsmodels/tsa/statespace/mlemodel.py:737: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals\n"}
+,{"stream_name":"stderr","time":2972.925267163,"data":"  mlefit = super().fit(\n"}
+,{"stream_name":"stdout","time":3020.709558421,"data":"alt2 candidate (1, 0, 2) (1, 1, 1, 24) AIC 221120.5\n"}
+,{"stream_name":"stderr","time":4139.692675986,"data":"/usr/local/lib/python3.13/dist-packages/statsmodels/tsa/statespace/mlemodel.py:737: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals\n"}
+,{"stream_name":"stderr","time":4139.692722583,"data":"  mlefit = super().fit(\n"}
+,{"stream_name":"stderr","time":4139.692728828,"data":"\n"}
+,{"stream_name":"stderr","time":4139.69273356,"data":"/usr/local/lib/python3.13/dist-packages/statsmodels/tsa/statespace/mlemodel.py:737: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals\n"}
+,{"stream_name":"stderr","time":4139.692738912,"data":"  mlefit = super().fit(\n"}
+,{"stream_name":"stdout","time":4188.944838291,"data":"alt2 candidate (2, 0, 2) (1, 1, 1, 24) AIC 220663.7\n"}
+,{"stream_name":"stderr","time":5095.722696185,"data":"/usr/local/lib/python3.13/dist-packages/statsmodels/tsa/statespace/mlemodel.py:737: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals\n"}
+,{"stream_name":"stderr","time":5095.722745161,"data":"  mlefit = super().fit(\n"}
+,{"stream_name":"stderr","time":5095.722753988,"data":"\n"}
+,{"stream_name":"stderr","time":5095.722761192,"data":"/usr/local/lib/python3.13/dist-packages/statsmodels/tsa/statespace/mlemodel.py:737: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals\n"}
+,{"stream_name":"stderr","time":5095.722769175,"data":"  mlefit = super().fit(\n"}
+,{"stream_name":"stdout","time":5139.571288617,"data":"alt2 candidate (2, 0, 1) (0, 1, 1, 24) AIC 221440.3\n"}
+,{"stream_name":"stdout","time":5139.578185498,"data":"alt2 selected: (220663.6624651843, (2, 0, 2), (1, 1, 1, 24))\n"}
+,{"stream_name":"stdout","time":7764.303264474,"data":"alt2 refit at origin 0 done\n"}
+,{"stream_name":"stdout","time":8754.721997606,"data":"alt2 refit at origin 13 done\n"}
+,{"stream_name":"stdout","time":9891.980950174,"data":"alt2 refit at origin 26 done\n"}
+,{"stream_name":"stdout","time":12186.238312915,"data":"alt2 refit at origin 39 done\n"}
+,{"stream_name":"stdout","time":13095.456888541,"data":"alt2 refit at origin 52 done\n"}
+,{"stream_name":"stdout","time":14164.686609679,"data":"alt2 refit at origin 65 done\n"}
+,{"stream_name":"stdout","time":15342.947050622,"data":"alt2 refit at origin 78 done\n"}
+,{"stream_name":"stdout","time":16497.958918626,"data":"alt2 refit at origin 91 done\n"}
+,{"stream_name":"stdout","time":16498.864264703,"data":"                  method  horizon_h  half      mase  coverage80  n_origins\n"}
+,{"stream_name":"stdout","time":16498.864316359,"data":"0  sarimax_alt2_nofuture         24     1  0.546164    0.700472         53\n"}
+,{"stream_name":"stdout","time":16498.864323561,"data":"1  sarimax_alt2_nofuture         24     2  0.551655    0.776961         51\n"}
+,{"stream_name":"stdout","time":16498.864329016,"data":"2  sarimax_alt2_nofuture        168     1  0.872241    0.679650         53\n"}
+,{"stream_name":"stdout","time":16498.864334683,"data":"3  sarimax_alt2_nofuture        168     2  0.901682    0.723347         51\n"}
+,{"stream_name":"stdout","time":16498.864340563,"data":"4    sarimax_alt2_oracle         24     1  0.479320    0.780660         53\n"}
+,{"stream_name":"stdout","time":16498.864346626,"data":"5    sarimax_alt2_oracle         24     2  0.484084    0.835784         51\n"}
+,{"stream_name":"stdout","time":16498.864353028,"data":"6    sarimax_alt2_oracle        168     1  0.799419    0.709176         53\n"}
+,{"stream_name":"stdout","time":16498.864358852,"data":"7    sarimax_alt2_oracle        168     2  0.840826    0.750146         51\n"}
+,{"stream_name":"stdout","time":16498.864364633,"data":"item A sensitivity done\n"}
+,{"stream_name":"stderr","time":16503.465866519,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":16503.465967988,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":16503.682374179,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":16503.682454895,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":16504.656914216,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":16504.786448303,"data":"[NbConvertApp] Writing 37277 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":16508.332797662,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":16509.19392257,"data":"[NbConvertApp] Writing 383549 bytes to __results__.html\n"}
+]
